@@ -81,7 +81,7 @@ app_license = "MIT"
 
 scheduler_events = {
 	"cron":{
-		"*/2 * * * *":[
+		"*/15 * * * *":[
 			"devjupiter.api.check_server"
 		]
 	}
