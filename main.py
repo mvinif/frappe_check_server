@@ -12,16 +12,16 @@ import datetime
 def check_server():
 	try:
 		# read server_list doc, which have a list of values (server name and ip address)
-		server_list = frappe.get_all("server_list", fields=["server_name","ip_addr"])
+		server_list = frappe.get_all("server_list", fields=["server_name","ip_address"])
 
 		for server in server_list:
 
 			# verify response for each server in list
-			resp = requests.get(str(server.ipa), verify=False, timeout=1)
+			resp = requests.get(str(server.ip_address), verify=False, timeout=1)
 
 			# create new doc named server_result, which keep the verification data
 			new_doc = frappe.new_doc("server_result")
-			new_doc.resp_server_name = server.sserver_name
+			new_doc.resp_server_name = server.server_name
 			new_doc.resp_code = resp.status_code
 			new_doc.resp_data = now()
 
@@ -40,7 +40,7 @@ def check_server():
 <strong>Server:</strong> {}<br>
 <strong>Return code:</strong> {}<br>
 <strong>Date:</strong> {}<br>
-""".format(server.sname, resp.status_code, frappe.utils.get_datetime(now()).strftime('%m/%d/%Y %H:%M:%S'))
+""".format(server.server_name, resp.status_code, frappe.utils.get_datetime(now()).strftime('%m/%d/%Y %H:%M:%S'))
 
 				frappe.sendmail(recipients=recipients, subject=subject, message=msg, now=True)
 
