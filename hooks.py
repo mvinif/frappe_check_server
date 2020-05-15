@@ -15,12 +15,12 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/devjupiter/css/devjupiter.css"
-# app_include_js = "/assets/devjupiter/js/devjupiter.js"
+# app_include_css = "/assets/monitoring/css/monitoring.css"
+# app_include_js = "/assets/monitoring/js/monitoring.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/devjupiter/css/devjupiter.css"
-# web_include_js = "/assets/devjupiter/js/devjupiter.js"
+# web_include_css = "/assets/monitoring/css/monitoring.css"
+# web_include_js = "/assets/monitoring/js/monitoring.js"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
@@ -43,7 +43,7 @@ app_license = "MIT"
 # }
 
 # Website user home page (by function)
-# get_website_user_home_page = "devjupiter.utils.get_home_page"
+# get_website_user_home_page = "monitoring.utils.get_home_page"
 
 # Generators
 # ----------
@@ -54,14 +54,14 @@ app_license = "MIT"
 # Installation
 # ------------
 
-# before_install = "devjupiter.install.before_install"
-# after_install = "devjupiter.install.after_install"
+# before_install = "monitoring.install.before_install"
+# after_install = "monitoring.install.after_install"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "devjupiter.notifications.get_notification_config"
+# notification_config = "monitoring.notifications.get_notification_config"
 
 # Permissions
 # -----------
